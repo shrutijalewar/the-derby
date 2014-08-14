@@ -1,4 +1,5 @@
 ## The Derby
+[![Build Status](https://travis-ci.org/shrutijalewar/the-derby.svg)](https://travis-ci.org/shrutijalewar/the-derby)
 ### Code Badges
 build status icon
 coverage status icon
