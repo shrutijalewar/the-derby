@@ -1,0 +1,29 @@
+{
+  "_id":{"$oid":"000000000000000000000001"},
+  "name":"Bob Jones",
+  "spouse":{"name":"Janet Jones", "photo":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVnwzw9dmNtpj72f1woIwiSnBIxGlwWIPFzSzyf1Pix-AHBz9JUQ"},
+  "photo":"https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQ_TbLu0-6TvoGthlCrg0YSC5exEm2drvuVUj9Tq0HbkuDrSm9BFA",
+  "cash":1283.45,
+  "assets":[{"name":"ring","photo":"http://nuweddingz.com/wp-content/uploads/2014/07/Cheap-Wedding-Rings-for-Men-chicago.jpg", "value":1200},{"name":"car","photo":"https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQJlxnEpikzfeajTEtQ3_3Jq1niAY27RvMGBFWJW_iZkEar85Rc", "value": 5000}],
+  "results":{"wins":2, "losses": 10}
+}
+
+{
+  "_id":{"$oid":"000000000000000000000002"},
+  "name":"Joe Doe",
+  "spouse":{"name":"Jane Doe", "photo":"https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQSpm_lAKp_zKAFo-2r9FwF3P2O5yAeNLfuvcbxlW5pn7w5fdi_"},
+  "photo":"https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTVe7Ourqp_6txxc1hueHULGncmS5D4uKaggIDvQCW2wy7uCVZxeg",
+  "cash":1283.45,
+  "assets":[{"name":"earrings","photo":"https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRtmqZPFEivlT1v2dryOP4VmQVPsCTzmlL8LmG5x18kmyYL5Plf", "value":2500},{"name":"bike","photo":"https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcR_dijfRCdaR0Q_XMzdfMx0JB4JYNL8p87X-XgKryUFBiwH0wlQ", "value": 5000}],
+  "results":{"wins":12, "losses": 10}
+}
+
+{
+  "_id":{"$oid":"000000000000000000000003"},
+  "name":"Barrack Bush",
+  "spouse":{"name":"Milli Bush", "photo":"https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTPNvbbI6XL4ImfNcSX41wUi92JpXgHmjMU-ocbtQm-5X68WdC1Uw"},
+  "photo":"https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSCYVZn4B2HZ91bpCB7G2QtH4sLLMLUb9WamXaF9ZeWHelslVE7sg",
+  "cash":1283.45,
+  "assets":[{"name":"plane","photo":"https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRob3D6M6Al9gUsyi2_edSyF6elzGJ2hALuZW9qZK9F8lPmiAlwaw", "value":10000},{"name":"house","photo":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwoRPg_nkTJ7RyLwIElhwVsE8tYssCoG9JUhwD3KbkHmVniNDd", "value": 500000}],
+  "results":{"wins":2, "losses": 20}
+}

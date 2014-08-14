@@ -1,0 +1,24 @@
+extends ../shared/template
+block content
+  h2 Gamblers
+    #gamblers
+      each gambler in gamblers
+        .gambler(data-gambler-id=gambler._id.toString())
+          .photo(style= 'background-image:url(#{gambler.photo});')
+          .name= gambler.name
+          .photoSpouse(style= 'background-image:url(#{gambler.spouse.photo});')
+          .nameSpouse= gambler.spouse.name
+          .cash Cash: $#{gambler.cash}
+          .results
+            .wins Wins: #{gambler.results.wins}
+            .losses Losses: #{gambler.results.losses}
+          #assets
+            each asset in gambler.assets
+              .photoAsset(style= 'background-image:url(#{asset.photo});')
+                .info
+                  .nameAsset: a(href='#') #{asset.name}
+                  .valueAsset= asset.value
+block scripts
+  script(src='/js/user/gambler.js')
+
+
