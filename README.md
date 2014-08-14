@@ -1,4 +1,4 @@
-## name of project
+## The Derby
 ### Code Badges
 build status icon
 coverage status icon
