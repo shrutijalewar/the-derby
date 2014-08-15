@@ -15,5 +15,6 @@ module.exports = function(app, express){
   app.delete('/gamblers/:id/assets/:name', gamblers.sellAsset);
 
   console.log('Routes Loaded');
+
 };
 
