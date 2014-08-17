@@ -14,7 +14,7 @@
     $.ajax({url:url, type:type, dataType:'json', success:function(data){
       var $gambler = $('.gambler[data-gambler-id='+data.id+']');
       $gambler.find('.cash').text('$' + data.cash.toFixed(2));
-      var $asset = $gambler.find('.info').children('.name:contains('+data.nameAsset+')').closest('.photoAsset');
+      var $asset = $gambler.find('.info').children('.name:contains('+data.nameAsset+')').closest('.Asset');
       $asset.fadeOut();
       setTimeout(function(){$asset.remove();}, 2000);
 
