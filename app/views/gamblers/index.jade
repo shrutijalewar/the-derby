@@ -6,17 +6,19 @@ block content
         .gambler(data-gambler-id=gambler._id.toString())
           .photo(style= 'background-image:url(#{gambler.photo});')
           .name= gambler.name
-          .photoSpouse(style= 'background-image:url(#{gambler.spouse.photo});')
-          .nameSpouse= gambler.spouse.name
           .cash Cash: $#{gambler.cash}
           .results
             .wins Wins: #{gambler.results.wins}
             .losses Losses: #{gambler.results.losses}
-          #assets
+
+          .photoSpouse(style= 'background-image:url(#{gambler.spouse.photo});')
+          .nameSpouse= gambler.spouse.name
+          .assets
+            a(href='/gamblers/#{gambler._id}/assets/new') Add Asset 
             each asset in gambler.assets
               .photoAsset(style= 'background-image:url(#{asset.photo});')
                 .info
-                  .nameAsset: a(href='#') #{asset.name}
+                  .nameAsset= asset.name
                   .valueAsset= asset.value
 block scripts
   script(src='/js/user/gambler.js')

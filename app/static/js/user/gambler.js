@@ -2,16 +2,29 @@
   'use strict';
 
   $(document).ready(function(){
-    $('.nameAsset').on(sellAsset);
+    $('.info').on(sellAsset);
   });
 
   function sellAsset(e){
     var id    = $(this).closest('.gambler').attr('data-gambler-id'),
-        asset = $(this).children().text();
+        asset = $(this).children('.name').text(),
+        type  = 'delete',
+        url   = '/gamblers/' + id + '/assets/' + asset;
 
-    console.log(id , asset);
-    e.preventDefault();
+    $.ajax({url:url, type:type, dataType:'json', success:function(data){
+      var $gambler = $('.gambler[data-gambler-id='+data.id+']');
+      $gambler.find('.cash').text('$' + data.cash.toFixed(2));
+      var $asset = $gambler.find('.info').children('.name:contains('+data.nameAsset+')').closest('.photoAsset');
+      $asset.fadeOut();
+      setTimeout(function(){$asset.remove();}, 2000);
+
+      if(data.isDivorced){
+        var $spouse = $gambler.find('.spouse');
+        $spouse.fadeOut();
+        setTimeout(function(){$spouse.remove();}, 2000);
+      }
+    }});
   }
-}
-)();
+
+})();
 

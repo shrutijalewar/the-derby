@@ -6,11 +6,33 @@ exports.index = function(req, res){
     res.render('gamblers/index',{gamblers:gamblers});
   });
 };
-exports.sellAsset = function(req, res){
-  Gambler.findById(req.params.id, function(gambler){
-    gambler.removeAsset(req.params.name);
+
+exports.create = function(req, res){
+  Gambler.create(req.body, function(){
+    res.redirect('/gamblers');
+  });
+};
+
+exports.newAsset = function(req, res){
+  res.render('gamblers/new-asset', {id:req.params.id});
+};
+
+exports.addAsset = function(req, res){
+  Gambler.findById(req.params.id, function(err, gambler){
+    gambler.addAsset(req.body);
     gambler.save(function(){
-      res.send({id:req.params.id, name:req.params.name, cash:gambler.cash, isMarried:gambler.assets.length});
+      res.redirect('/gamblers');
     });
   });
+};
+exports.sellAsset = function(req, res){
+  Gambler.findById(req.params.id, function(err, gambler){
+    gambler.removeAsset(req.params.name);
+    gambler.save(function(){
+      res.send({id:req.params.id, name:req.params.name, cash:gambler.cash, isDivorced:!!!gambler.assets.length});
+    });
+  });
+};
+exports.new = function(req, res){
+  res.render('gamblers/new');
 };
